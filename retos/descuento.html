@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Descuento de Monto</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 	//Dado un monto calcular el descuento 
+ 	//25% si monto mayor o igual que 300
+ 	//20% si monto mayor que 150 y menor que 300
+ 	//si es menor que 150 no hay descuento
+
+ 	function descuento(){
+
+ 		var monto, descuento;
+ 		    monto = dato.monto.value;
+
+ 		if(monto >= 300){
+           descuento = monto * 0.25;
+           console.log(document.getElementById('result')=descuento);
+ 		}else{
+ 			if(monto>150 && monto <300){
+ 				descuento = monto * 0.20;
+ 				document.getElementById('result')=descuento;
+ 			}else{
+ 				document.getElementById('No hay descuentos');
+ 			}
+ 		}
+ 	}
+
+ </script>
+ <form method="get" name="dato">
+ Ingrese el monto:<input type="text" name="monto">
+ <input type="button" value="Mostrar" value="Mostrar" name="" onclick="descuento()"><br><br>
+ El descuento es: <input name="result" id="result" type="text"><br>	
+ </form>
+</body>
+</html>

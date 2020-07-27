@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>For One</title>
+</head>
+<body>
+<script type="text/javascript">
+	'use strict'
+   //leer 3 pares de datos, cada dato corresponde a 
+   //medida de la base por la altura de un triangulo
+
+   //informar: de cada triangulo la medida de su base y su altura y su superficie
+   //la cantidad de triángulos cuya superficie es mayor a 12
+       var f, 
+       base, 
+       altura, 
+       superficie, 
+       contenedor=0;
+       //recorrer los lados
+       for (f=1; f<=3; f++){
+       	 base=parseInt(prompt('Ingrese la base', ''));
+       	 altura=parseInt(prompt('Ingrese la altura', ''));
+       	 superficie=base*altura/2;
+
+       	 if(superficie>12)
+       	 {
+       	 	contenedor++;
+       	 }
+       	 document.write('triangulo nro:'+f+'<br>');
+       	 document.write('Base:'+base+'<br>');
+       	 document.write('Base:'+altura+'<br>');
+       	 document.write('Base:'+superficie+'<br>');
+       }
+       document.write('cantidad de triangulos con superficie mayor a 12:'+contenedor);
+       console.log('La cantidad de triangulos con superficie mayor a 12:'+contenedor);
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Valores Positivos y Negativos</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//Se realiza la carga de 10 valores enteros
+	//cantidad de valores negativos
+	//cantidad de valores positivos
+	//cantidad de multiplos de 15 
+	//el valor acumulado de los numeros ingresados que son pares. 
+	var cantpositivos=0, cantnegativos=0, multiplos=0,  
+	    sumapares=0,  f, valor;
+
+    //recorrer 
+    for(f=1;f<=10;f++){
+
+    	valor=parseInt(prompt('Ingrese un valor:', ''));
+
+        if (valor<0){
+        	cantnegativos++;
+        }else {
+        	if (valor>0){
+        	cantpositivos++;
+        	}
+        }
+        if (valor%15==0 && valor!=0)
+        {
+        	multiplos++;
+        }
+        if (valor%2==0)
+        {
+        	sumapares=sumapares+valor;
+        }
+     }
+     //
+     document.write('Cantidad de valores negativos:'+cantnegativos+'<br>');
+     document.write('Cantidad de valores positivos:'+cantpositivos+'<br>');
+     document.write('Cantidad de multiplos de 15:'+multiplos+'<br>');
+     document.write('Suma de los valores pares ingresados:'+sumapares+'<br>');
+
+	</script>
+
+</body>
+</html>

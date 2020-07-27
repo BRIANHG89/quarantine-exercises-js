@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Remove The false or Null Elements</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/***
+          remove all false from array 
+          fals values are false, 0 or null, undefined, and, NaN.
+           Hint: try to convert each value to a boolean
+		***/
+
+		 //using filter
+
+          function bouncer(arr){
+          	return arr.filter(val=> Boolean(val));
+          }
+
+          console.log(bouncer([7, 'ate', '', false, 9, 10, 14, 17, 23]);
+
+          //using reduce
+
+          function bouncer(arr){
+          	return arr.reduce((acc, val) => {
+
+          		 if (Boolean(val)){
+          		 	acc.push(val);
+          		 }
+
+          		 return acc;
+          	}, []);
+          }
+	</script>
+
+</body>
+</html>

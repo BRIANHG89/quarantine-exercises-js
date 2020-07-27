@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Disem-vowels</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+  	//you task is to write a function that takes a string and return 
+  	// a new string with all vowels removed
+  	// for example "this website is for losers LOL!" would
+  	// become the wbst s fr lsrs LL!
+
+  	//NOTE:
+
+    function disemvowel(str) {
+  
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    return str.split('').filter(function(el) { 
+    return vowels.indexOf(el.toLowerCase()) == -1;
+    }).join('');
+    /****
+
+
+    ***/
+
+  }
+
+  	//console.log(disemvowel);
+
+
+  </script>
+
+</body>
+</html>

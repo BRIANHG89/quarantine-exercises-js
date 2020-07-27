@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Letras a Objetos</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+
+	//aqui se esta regresando el caracter como objeto
+    function contarCaracteresV3(str) {
+    let cantidadLetras = []
+    let caracteres = str.toLowerCase().replace(/ /g, '')
+                        .split('').filter((c,i,self) => (
+        self.indexOf(c) === i
+    ))
+    
+    
+    for(var i=0; i<caracteres.length; i++){
+        let arreglo=[]
+        str.split('').map(n => {
+            if(n.toLowerCase() === caracteres[i]){
+                arreglo.push(n)
+            }          
+        })
+        cantidadLetras.push({[caracteres[i]]: arreglo.length})
+    }
+
+    return cantidadLetras
+}
+
+console.log(contarCaracteresV3("Abcaaa cada"));
+
+	</script>
+
+</body>
+</html>

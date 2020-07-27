@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Participante</title>
+</head>
+<body>
+	<script type="text/javascript">
+	   //representar los datos de un participante
+	   //definir las propiedades
+	   //nombre - puntos
+
+	   //funciones: imprimir (mostrar el nombre del jugador y los puntos actuales)
+	   //aumentarpuntos (permite incrementar la cantidad de puntos actuales del jugador)
+       //verificarsigno (mostrar un mensaje si los puntos superan a 1000)
+        var participant1 = {
+              nombre: 'Michael', 
+              puntos: '0',
+
+            imprimir: function ()
+            {
+            	document.write(this.nombre+'<br>');
+            	document.write(this.puntos+'<br>');
+            }, 
+            aumentarpuntos: function(incrementar)
+            {
+                 this.puntos=this.puntos+incrementar;
+            	//document.write(this.puntos++);
+            },
+            //verificar si los puntos superan a los actuales
+            verificarsigano: function()
+            {
+            	if (this.puntos > 1000){
+            		document.write('Gano<br>');
+            	}
+
+            }
+        };
+
+          //bloque principal 
+
+          participant1.imprimir();
+
+          participant1.aumentarpuntos(1500);
+          participant1.verificarsigano();
+          participant1.aumentarpuntos(501);
+          participant1.verificarsigano();
+          participant1.imprimir();
+
+
+          participant1
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array Methods</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 	const companies = [
+    {name: "Company one", category: "finance", start: 1921, end: 2003}, 
+    {name: "Company two", category: "retail", start: 1922, end: 2004}, 
+    {name: "Company three", category: "venter", start: 1923, end: 2005}, 
+    {name: "Company four", category: "Auto", start: 1924, end: 2005}, 
+    {name: "Company five", category: "Chevrolet", start: 1925, end: 2006}, 
+    {name: "Company six", category: "Nissan", start: 1926, end: 2007}, 
+    {name: "Company seven", category: "Toyota", start: 1927, end: 2008}
+
+ 	];
+ 	//
+ 	
+ 	const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+ 	//
+ 	//for(let i=0; i < companies.length; i++){
+ 	//	console.log(companies[i]);
+ 	//}
+    //
+ 	//forEach
+
+    /*
+ 	companies.forEach(function(company){
+ 		console.log(company.name);
+ 	});
+    */
+
+    /*
+    let canDrink = [];
+    for(let i=0; i < ages.length; i++){
+    	if(ages[i] >= 21){
+    		canDrink.push(ages[i]);
+    	}
+    }
+
+    console.log(canDrink);
+    */
+
+   
+    //const canDrink = ages.filter(function(age) {
+    //if(age >= 21) {
+      //return true;
+     //}
+   //});
+
+   //const canDrink = ages.filter(age => age >= 21);
+
+   //filter companies
+   //const retailCompanies = companies.filter(function(company){
+   	//   if(company.category === 'retail'){
+   	//   	  return true;
+   	//   }
+   //});
+
+   	//map 
+    //const companyNames = companies.map(function(company){
+    //	return company.name;
+    //});
+
+    //const testMap = companies.map(function(company){
+    //	return `${company.name} [{$company.start} - ${company.end}]`;
+
+    //});
+
+    //
+
+   /*
+   const testMap = companies.map(function(company) {
+   return `${company.name} [${company.start} - ${company.end}]`;
+   });
+
+    const testMap = companies.map(company => `${company.name} [${company.start} - ${company.end}]`);
+
+     const ageMap = ages
+     .map(age => Math.sqrt(age))
+     .map(age => age * 2);
+    */
+
+     //Sort companies by start year
+
+     const sortedCompanies  = companies.sort(function(c1, c2) {
+     if(c1.start > c2.start) {
+      return 1;
+     } else {
+       return -1;
+     }
+     });
+
+ </script>
+
+</body>
+</html>

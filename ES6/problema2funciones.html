@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tabla de multiplicar</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//
+		/* `` **/
+		function tablaMultiplicar(tabla=2, cantidad=10) {
+			document.write(`tabla del ${tabla}<br>`)
+			for(let x=1;x<=cantidad;x++){
+				v=x*tabla;
+				document.write(`${tabla} * ${x} = ${x}<br>`);
+			}
+		}
+		
+
+        tablaMultiplicar();
+        tablaMultiplicar(3);
+        tablaMultiplicar(5, 20);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio Do-While 2</title>
+</head>
+<body>
+	<script type="text/javascript">
+		'use strict'
+		do{
+          var valor=parseInt(prompt('Ingrese un valor entre 0 y 999', ''));
+          document.write('El valor '+valor+'tiene ');
+
+          if (valor<10){
+              document.write('Tiene 1 digitos');
+          }else{
+              if (valor<100){
+              	document.write('Tiene 2 digitos');
+              }else{
+              	document.write('Tiene 3 digitos');
+              }
+          }
+          document.write('<br>');
+		}while(valor!=0);
+
+
+       /**
+        haga
+          ingrese un valor entre 0 y 999
+        si valor < 10
+             tiene un dígito
+        caso contrario 
+             si valor<100
+               tiene dos digitos
+            caso constrario
+               tiene tres digitos
+
+          hasta valor!=0
+       **/
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Binary Agent</title>
+</head>
+<body>
+     <script type="text/javascript">
+     	//Binary Agent
+     	/****
+
+
+     	****/
+
+     	function binaryAgent(str) {
+     		return str.split(' ').map(char => {
+     			char = parseInt(char, 2)
+     			return String.fromCharCode(char);
+     		}).join('');
+     	}
+
+       console.log(binaryAgent('01000010 01110010 01011001 01000001 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111'))
+     </script>
+
+</body>
+</html>

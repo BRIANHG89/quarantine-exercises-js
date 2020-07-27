@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu de un Restaurante</title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+     El siguiente es el menú de un restaurante de bocadillos. Diseñar un algoritmo capaz de leer el número de unidades consumidas de cada alimento ordenado y calcular la cuenta total.
+	 Bocadillo de jamón (4 euros)
+	 Bocadillo de queso (3 euros)
+	 Patatas fritas (2 euros)
+     Refresco (1 euro)
+	 Cerveza (2 euros)
+	*/
+
+	document.write('Calcular el valor total de la cuenta de un restaurante');
+	document.write('<br>');
+
+	var bocadillojamon = parseInt(prompt('Registre el número de bocadillos de jamon a consumir'));
+	var bocadilloqueso = parseInt(prompt('Registre el número de bocadillos de queso a consumir'));
+	var papasfritas = parseInt(prompt('Registre el número de papas fritas a consumir'));
+	var ceverzas = parseInt(prompt('Ingrese la cantidad de cervezas a consumir'));
+
+
+	var total = bocadillojamon*4 + bocadilloqueso*3 + papasfritas*2 + ceverzas * 2;
+	document.write('El valor total a pagar es de:'+total+'euros'); 
+
+
+</script>
+</body>
+</html>

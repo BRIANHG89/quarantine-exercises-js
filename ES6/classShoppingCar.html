@@ -1,0 +1,48 @@
+class ShoppingCart {
+    constructor() {
+        this.products = [];
+    }
+
+    // Agregar un producto al carrito:
+    addProduct(amount, price) {
+        this.products.push(...Array(amount).fill(price) );
+    }
+
+    // Mostrar productos del carrito
+    showProducts() {
+        console.log( this.products );
+    }
+
+    // Calcular total de los productos agregados al carrito:
+    calcTotal() {
+        return this.products
+                .map( price => price )
+                .reduce( (ac, price) => ac + price, 0 );
+    }
+
+    // Imprime el total:
+    printTicket() {
+        console.log( `Total a pagar ${ this.calcTotal() }` )
+    }
+}
+
+// Intancia de Book:
+const book1 = new Book('1984', 'G.O', 350);
+// Instancia de Comic:
+const comic1 = new Comic('The Killing Joke', 'A.M', 150, ['B.B'] );
+
+comic1.addIllustrator('J.H');
+console.log( comic1.illustrators );
+
+const cart = new ShoppingCart();
+
+
+cart.addProduct(2, comic1.price);
+cart.addProduct(3, book1.price);
+
+cart.showProducts();
+
+cart.printTicket();
+
+book1.getAllData();
+comic1.getAllData();

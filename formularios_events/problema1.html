@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Problema 1</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//
+		/******
+         Confeccionar una página que permita tomar un examen múltiple choice. Se debe mostrar una pregunta y seguidamente un objeto SELECT con las respuestas posibles. Al presionar un botón mostrar la cantidad de respuestas correctas e incorrectas (Disponer 4 preguntas y sus respectivos controles SELECT)
+		******/
+		function verificar(){
+    	var correctas=0;
+    	var ele1=document.getElementById('pregunta1');
+    	var ele2=document.getElementById('pregunta2');
+    	var ele3=document.getElementById('pregunta3');
+    	var ele4=document.getElementById('pregunta4');
+    	if (ele1.options[ele1.selectedIndex].value==3)
+    	{
+	      correctas++;
+	    }
+	    if (ele2.options[ele2.selectedIndex].value==1)
+	    {
+	      correctas++;
+	    }
+	    if (ele3.options[ele3.selectedIndex].value==2)
+	    {
+	      correctas++;
+	    }
+	    if (ele4.options[ele4.selectedIndex].value==2)
+	    {
+	      correctas++;
+	    }
+	    alert('Cantidad de respuestas correctas:'+correctas);
+	  	}
+	</script>
+   <form>
+  Como se dice rojo en ingles:<br>
+  <select id="pregunta1">
+    <option value="1">blue</option>
+    <option value="2">green</option>
+    <option value="3">red</option>
+  </select>
+  <br>
+  Como se dice ventana en ingles:<br>
+  <select id="pregunta2">
+    <option value="1">window</option>
+    <option value="2">door</option>
+    <option value="3">bedroom</option>
+  </select>
+  <br>
+  Como se dice gato en ingles:<br>
+  <select id="pregunta3">
+    <option value="1">dog</option>
+    <option value="2">cat</option>
+    <option value="3">lion</option>
+  </select>
+  <br>
+  Como se dice hombre en ingles:<br>
+  <select id="pregunta4">
+    <option value="1">women</option>
+    <option value="2">man</option>
+    <option value="3">child</option>
+  </select>
+  <br>
+  <input type="button" value="Controlar" onClick="verificar()">
+</form>
+</body>
+</html>

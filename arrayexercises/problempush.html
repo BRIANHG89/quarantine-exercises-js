@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Problema push</title>
+</head>
+<body>
+	   <script type="text/javascript">
+		    /**
+           crear un vector con 5 elementos comprendidos 
+           entre 1 y 1000 de forma aleatoria. Luego extraer los dos últimos 
+           elementos sumarlos y mostrarlos
+
+           NOTE:el array empieza con indice 0 y el 
+                último elemento está almacenado en array.length -1 (indice 4)
+                ejemplo:
+                var array = [1, 2, 3, 4, 5];
+                console.log(array[array.length - 2])**/
+		     var valores=[];
+         var f;
+
+         for(f=1; f<=5; f++){
+          	
+          	var nro=1+(Math.random()*1000);
+            valores.push(parseInt(nro));
+
+         }
+         //recorrer y determinar la longitud
+         for(f=0;f<valores.length;f++){
+         	document.write(valores[f]+'<br>');
+         }
+          var sumaultimos=valores.pop()+valores.pop();
+       
+          document.write('La suma de las dos últimas componentes es:'+sumaultimos+'<br>');
+    		  document.write('Tamaño final del vector'+valores.length+'<br>');
+    		  document.write('Elementos restantes del vector<br>');
+    
+          //
+          for(f=0;f<valores.length;f++){
+
+    	    document.write(valores[f]+'<br>');
+  		  
+  		    }
+          //el último array esta almacenando en array.length - 1 (indice 4) 
+           
+           /*
+             var valores=[];
+             var f;
+
+             for(f=1; f<=5; f++){
+                
+                var nro=1+(Math.random()*1000);
+                valores.push(parseInt(nro));
+             }
+
+             for(f=0;f<valores.length;f++){
+                document.write(valores[f]+'<br>');
+             }
+             var sumaultimos=valores.pop()+valores.pop();
+
+             document.write('La suma de las dos últimas componentes es:'+sumaultimos+'<br>');
+             document.write('Tamaño final del vector'+valores.length+'<br>');
+             document.write('Elementos restantes del vector<br>');
+
+
+             //
+             for(f=0;f<valores.length;+f++){
+               document.write(valores[f]+'<br>');
+             }
+
+
+
+           */
+
+
+	</script>
+
+</body>
+</html>

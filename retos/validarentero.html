@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Valida Entero</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//validar un entero
+
+		function fits(x, y){
+
+			if(Number.isInteger(y / x) || Number.isNaN){
+				return 'fits!!';
+			}
+			return 'Does Not Fit';
+		}
+
+		console.log(fits(5, 10));
+		//
+		console.log(fits(5,11));
+	</script>
+
+</body>
+</html>

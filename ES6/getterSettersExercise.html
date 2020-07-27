@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Getters and Setters Exercise</title>
+</head>
+<body>
+	<script type="text/javascript">
+	 /****
+     Declarar una clase llamada Persona.
+	 Definir los atributos donde almacenar su nombre y edad. Crear dos propiedades para que se puedan acceder a los atributos definidos.
+	 Validar que no se puedan ingresar valores negativos para la edad.
+	 ****/	
+     class Persona {
+     	constructor(nom, ed){
+     		this._nombre=nom;
+     		this._ed;
+
+     	}
+
+     	get nombre(){
+     		return this._nombre;
+     	}
+
+     	set nombre(n){
+     		this._nombre=n;
+     	}
+
+     	get edad(){
+            return this._edad;    		
+     	}
+
+     	set edad(e){
+     		if (e>=0){
+     			this._edad=e;
+     		}else{
+     			throw "La edad no puede ser negativa";
+     		}
+     	imprimir(){
+     	document.write(`Nombre:${this.nombre} y Edad:${this.edad}`);
+     	 }	
+     	} 
+
+     	/****
+         get edad(){
+	         return this._edad;
+         }
+         set edad(e){
+	         if (e>=0){
+	            this._edad=e;
+	         }else{
+	            throw "La edad no puede ser negativa";
+	         }
+	       imprimir();
+	       document.write(`Nombre:${this.nombre} y Edad:${this.edad}`);
+         }
+
+     	****/
+     }
+
+     const persona1 = new Persona();
+     persona1.nombre='Pablo Rodriguez';
+     persona1.edad=-42;
+
+     
+
+	</script>
+
+</body>
+</html>

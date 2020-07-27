@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		//
+		const jugador1 = {
+			    nombre: 'ana',
+			    puntos: 0,
+			    imprimir() {
+			      document.write('Nombre:'+this.nombre+'<br>');
+			      document.write('Puntos:'+this.puntos+'<br>');
+			    },
+			    aumentarpuntos(cant) {
+			      this.puntos=this.puntos+cant;
+			    },
+			    verificarsigano() {
+			      if (this.puntos>1000)
+			        document.write('Gano<br>');
+			      else
+			        document.write('No gano<br>');
+			    }
+			  };
+
+			  jugador1.imprimir();
+			  jugador1.aumentarpuntos(500);
+			  jugador1.verificarsigano();
+			  jugador1.aumentarpuntos(501);
+			  jugador1.verificarsigano();  
+			  jugador1.imprimir();
+
+			  //que puedo crear en referencia a este ejercicio
+			  /****
+
+
+			  **/
+	</script>
+
+</body>
+</html>

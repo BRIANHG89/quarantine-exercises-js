@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Carga Nombre</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/****
+         Confeccionar una clase que permita carga el nombre y la edad de una persona. Mostrar los datos cargados. Imprimir un mensaje si es mayor de edad (edad>=18)
+		****/
+		class Persona{
+			constructor(nombre, edad){
+				this.nombre=nombre;
+			    this.edad  = edad;	
+			}
+
+			imprimir(){
+                 document.write('Nombre:'+nombre+'<br>');
+                 console.log(('edad:'+edad+'<br>'));
+			}
+			verificaedad(edad){
+                if(edad>=18){
+                 document.write('La persona:'+nombre+'es mayor');
+                 }else{
+                 document.write('La persona:'+nombre+'es menor')
+                 }
+			}
+
+		}
+		//instanciar la clase
+
+        const persona1 = new Persona('Dorothy', 17);
+        document.write('La persona :'+nombre+'es');
+        const persona2 = new Persona('Valkiria', 22);
+        document.write('La persona :'+nombre+'es'+edad);
+
+
+	</script>
+
+</body>
+</html>

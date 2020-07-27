@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Problema For Of</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		const articulos = [
+
+             {
+              nombre:'sandia', 
+              precio:12
+             }, 
+             {
+              nombre:'manzanas',
+              precio:52
+             }, 
+             {
+              nombre:'naranjas', 
+              precio:35
+             },
+             {
+              nombre:'peras', 
+              precio:75
+             }
+		]
+		/****
+         Imprimir primero todo el arreglo y luego mediante otro for of recorrer el arreglo e imprimir todos los artículos con un precio superior a 30
+		***/
+
+		document.write('<h1>Listado completo de artículos.</h1>')
+		for(let articulos of articulos)
+		document.write(`${articulo.nombre} - ${articulo.precio}<br>`);
+
+         document.write('<h1>Listado de artículos con un precio superior a 30.</h1>');  
+		  for(let articulo of articulos)
+		    if (articulo.precio>30)
+		      document.write(`${articulo.nombre} - ${articulo.precio}<br>`);
+
+	</script>
+
+</body>
+</html>

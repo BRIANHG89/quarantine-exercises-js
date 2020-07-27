@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lista Mayores</title>
+</head>
+<body>
+   <script type="text/javascript">
+   	
+    //cargar dos listas de 3 valores cada una
+    //mostrar cual de las dos listas tiene el mayor valor acumulado
+    //mensajes lista1 mayor, lista2 mayor, lista iguales
+    //puede haber dos o mas estructuras repetitivas en un algoritmo 
+    var total1=0, contenedor=0, nro;
+
+    while (contenedor<3){
+    	nro=parseInt(prompt('Ingrese valor de la primera lista:', ''));
+    	total1=total1+nro;
+    	contenedor=contenedor+1;
+    }
+    var total2=0, contenedor=0;
+
+    while (contenedor<3) {
+    	nro=parseInt(prompt('Ingrese valor de la segunda lista:', ''));
+    	total2=total2+nro;
+    	contenedor=contenedor+1;
+
+    }
+    if (total1>total2)
+    {
+     	document.write('Tiene mayor valor la lista 1');
+    }else{
+    if (total1<total2)
+    {
+     		document.write('Tiene mayor valor la lista2');
+    }else{
+     		document.write('Tienen el mismo valor acumulado');
+     }
+    }
+    
+   </script>
+</body>
+</html>

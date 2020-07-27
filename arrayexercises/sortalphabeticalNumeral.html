@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sort Alphabetically and Numerically</title>
+</head>
+<body>
+  <button onclick="myFunction1()">Sort Alphabetically</button>
+  <button onclick="myFunction2()">Sort Numerically</button>
+
+
+ <p id="demo"></p>
+
+<script type="text/javascript">
+	//
+	var points  = [40, 20, 100, 2, 1, 10];
+	
+	document.getElementById("demo").innerHTML = points;
+
+	function myFunction1(){
+		points.sort();
+		document.getElementById("demo").innerHTML = points;
+	}
+	//ordenar alphabetically
+	function myFunction2(){
+		points.sort(function(a, b){
+			return a - b
+		});
+		document.getElementById("demo").innerHTML = points;
+
+	}
+
+   //
+</script>
+
+</body>
+</html>

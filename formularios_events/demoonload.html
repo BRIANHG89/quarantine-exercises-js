@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Evento On-Load</title>
+</head>
+<body>
+	<body onload="activarPrimerControl()">
+
+	<script type="text/javascript">
+	//el evento onLoad se ejecuta al último de la carga
+	//de los elementos HTML
+
+     function activarPrimerControl(){
+     	document.getElementById('nombre').focus();
+     }
+
+	</script>
+
+    <form>
+    	Ingrese su nombre:
+    	<input type="text" id="nombre"><br>
+    	Ingrese su edad:
+    	<input type="text" id="edad"><br>
+    	<input type="button" value="confirmar">
+    </form>
+		
+	</body>
+
+</body>
+</html>

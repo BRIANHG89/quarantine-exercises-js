@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array Examples</title>
+</head>
+<body>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		
+     var cars = ["Chevrolet", "Nissan", "Hyundai"];
+     document.getElementById("demo").innerHTML = cars;
+
+
+     //length property 
+
+     var fruits = ["Banana", "Orange", "Apple", "Mongo"];
+     fruits.length;
+
+     //array elements are accesses using numeric indexes (starting from 0)
+
+     var fruits = ["Banana", "Orange", "Apple", "Mango"];
+     var last = fruits[fruits.length-3];
+     document.getElementById("demo").innerHTML = last;
+
+     //array.forEach function 
+
+     /*
+     var fruits, text;
+     fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+     text = "<ul>";
+     fruits.forEach(myfunction);
+     text += "</ul>";
+
+     function myFunction(value) {
+     	text += "<li>" + value + "</li>";
+     }
+
+     //add new element to an array is using the push() method. 
+
+     var fruits = ["Banana", "Orange", "Apple", "Mango"];
+     fruits.push("Lemon");
+
+     //associative arrays 
+
+     //
+     */
+
+     //convertir un array en string
+
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.getElementById("demo").innerHTML = fruits.toString();
+      
+     //pop method removes the last element
+
+     var fruits = ["Banana","Orange", "Apple", "Mango"];
+     fruits.pop();
+
+
+     var fruits = ["Banana","Orange", "Apple", "Mango"];
+     fruits.push("Kiwi");
+     console.log(fruits);
+
+     //shift methods remove the first element in the array 
+
+     var fruits = ["Banana", "Orange", "Apple", "Mango"];
+     fruits.shift();
+     console.log(fruits);
+
+     //unshift() method adds a new element to an array
+
+     var fruits = ["Banana", "Orange", "Apple", "Mango"];
+     fruits.unshift("Lemon");
+     console.log(fruits);
+
+     //changing elements
+     //array elements are accessed using their index number 
+     //
+     var fruits = ["Banana", "Orange", "Apple", "Mango"];
+     fruits[1] = "Kiwi"; //changes the first element of fruits 
+     console.log(fruits);
+
+     //length property provides an easy way to append
+
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      fruits[fruits.length] = "Kiwi";
+      console.log(fruits);//append "kiwi" to fruits
+
+      //deleting elements 
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+      delete fruits[0];
+
+      //splice methods can be used to add new items to an array 
+       var fruits = ["Banana", "Orange", "Apple", "Mango"];
+       fruits.splice(2, 2, "Lemon", "Kiwi");
+       console.log(fruits);
+
+       //the first parameter defines the position where new elements should be added
+       //the second defines how many elements should be removed
+
+
+        //concat() concatena los elementos de un array 
+
+        var arr1 = ["Email", "Tobias", "Linus"];
+        var myChild = arr1.concat("Peter");
+
+        //slice method
+        
+       var fruits = ["Banana", "Orange", "Apple", "Mango"];
+       var citrus = fruits.slice(3);
+       document.getElementById("demo").innerHTML = fruits + "<br><br>" + citrus;
+       console.log(citrus);
+
+
+       // array sorts an array alphabetically order elements
+
+       var fruits = ["Banana", "Orange", "Apple", "Mango"];
+       fruits.sort();
+       console.log(fruits);
+
+       //reversing an array 
+       var fruits = ["Banana", "Orange", "Apple", "Mango"];
+       fruits.sort();
+       fruits.reverse();
+       console.log(fruits); 
+
+	</script>
+
+</body>
+</html>

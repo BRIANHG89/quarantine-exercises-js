@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Valida input</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//como saber si una entrada es un array o no
+
+	    is_array = function(input) {
+			if (toString.call(input) === "[object array]")
+				return true;
+			return false;
+		};
+		//
+		console.log(is_array('w3resource'));
+		console.log(is_array([1, 2, 3, 4, 5]));
+
+
+
+	</script>
+
+</body>
+</html>

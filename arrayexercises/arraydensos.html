@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array Densos</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//
+		/***
+		Crear un vector vacío. Mediante una estructura repetitiva solicitar la carga de elementos por teclado hasta que se ingrese el cero. No almacenar dicho valor en el vector. Luego sumar todas las componentes del vector, mostrar dicha suma y el tamaño del vector.
+		****/
+
+		var vec=[];  //array 
+		var valor;
+		var contenedor=0;//acumlador
+		do {
+			valor=parseInt(prompt('Ingrese un valor entero (0 para finalizar)',''));
+			if (valor!=0)
+			{
+				//contenedor hace de acumulador
+				vec[contenedor]=valor;
+				contenedor++;
+			}
+
+		}while(valor!=0);
+		//
+		var f, suma=0;
+		for(f=0;f<vec.length;f++){
+			//suma=suma+vec[f];
+			suma+=vec[f];
+
+		}
+		document.write('Se ingresaron '+vec.length+' valores<br>');
+		document.write('La suma de los valores ingresados es:'+suma);
+	
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CheckBox LocalStorage</title>
+</head>
+<body>
+	<input type="checkbox" id="checkbox1">checkbox</input>
+	<button type="button" onClick="save()">save</button>
+
+	<script type="text/javascript">
+
+
+	function save() {	
+		var checkbox = document.getElementById("checkbox1");
+	    localStorage.setItem("checkbox1", checkbox.checked);	
+	}
+
+	//for loading
+	var checked = JSON.parse(localStorage.getItem("checkbox1"));
+	    document.getElementById("checkbox1").checked = checked;
+
+		
+	</script>
+
+</body>
+</html>

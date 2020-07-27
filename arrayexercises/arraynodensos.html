@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array No Densos</title>
+</head>
+<body>
+   <script type="text/javascript">
+   	 //
+   	 /***
+   	 Ingresar por teclado un nro de cliente y el monto a depositar. Almacenar en un vector, utilizar como subíndice el nro de cliente y almacenar el monto depositado. Sumar todos los depósitos recorriendo el vector e identificando las componentes cargadas (es decir las que tienen un valor distinto a null). Imprimir la suma total depositada y la cantidad de clientes que depositaron.
+   	 ***/
+   	 var depositos=[];
+   	 var nro, monto;
+   	 do {
+   	 	nro=parseInt(prompt('Ingrese nro de clientes', ''));
+   	 	if(nro!=0)
+   	 	{
+   	 	monto=parseInt(prompt('Ingrese el monto a depositar', ''));
+        depositos[nro]=monto;    
+
+   	 	}
+   	 }while (nro!=0);
+   	 //
+   	 var suma=0;
+   	 var canti=0;
+   	 for(var f=0;f<depositos.length;f++)
+   	 {
+   	 	//verificamos el componente del vector que no sea nulo
+   	 	if(depositos[f]!==undefined)
+   	 	{
+   	 		suma=suma+depositos[f];
+   	 		canti++;
+   	 	}
+   	 }
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slice and Splice</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/****
+        You are given two arrays and an index.
+		Use the array methods slice and splice to copy each element of the first array into the second array, in order.
+		Begin inserting elements at index n of the second array.
+		Return the resulting array. The input arrays should remain the same after the function runs.
+
+		****/
+	   function frankenSplice(arr1, arr2, n) {
+	   	  let newArr = [...arr2];
+	   	  newArr.splice(n, 0, ...arr1);
+          //
+          return newArr;
+	   }
+	      //
+        console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
+
+          //es posive clonar un objeto o array 
+	
+          //usando el truco del json, consiste en convertir un objeto
+          //en cadena, copiar dicha cadena en la nueva variable
+          //reconvertir la cadena en objeto. 
+          //
+
+          /**
+          var foo;
+          var elements = JSON.parse( JSON.stringify( foo ));
+          elements[ 'name' ] = "Muzzy in Gondoland";
+
+          console.log( foo['name'] ); //Muzy
+          console.log( elements['name'] ); //Muzzy in Gondoland
+          **/
+         
+          //para clonar el array usamos el método slice()
+
+			          
+			var list = ["A",1,2,3,5,8,13];
+			 
+			//clonamos el array original (shallow copy)
+			var cloned = list.slice(0);
+			 
+			//modificamos el primer elemento del array original
+			list[0] = 9;
+			 
+			//agregamos un elemento al inicio del array original
+			list.unshift("X");
+			 
+			//agregamos un elemento al final del array clonado
+			cloned.push(21);
+			 
+			console.log("original: ", list);
+			console.log("cloned: ", cloned)
+
+	</script>
+
+</body>
+</html>

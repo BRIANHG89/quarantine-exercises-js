@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Palindrome Numeric</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 	
+ 	        function Palnum()
+			{
+				var rem, temp, final = 0;
+				var number = Number(document.getElementById("N").value);
+
+				temp = number;
+				while(number>0)
+				{
+					rem = number%10;
+					number = parseInt(number/10);
+					final = final*10+rem;
+				}
+				if(final==temp)
+				{
+					window.alert("number is Palindrome");
+				}
+				else
+				{
+					window.alert("number is not palindrome");
+				}
+			}
+		
+	
+	</script>
+		<br>
+		<h1>Check Whether a number is Palindrome or not</h1>
+		Enter The Number :<input type="text" name="n" id = "N"/>
+   <button onClick="Palnum()">submit</button>
+
+    <!--
+ 	/**
+    * @param {number} x the number to check
+    * @return {boolean} true if it's a palindrome number
+    */
+    /**
+const isPalindrome = x => {
+    if (x < 0) return false
+
+    let reversed = 0, y = x
+
+    while (y > 0) {
+        const lastDigit = y % 10
+        reversed = (reversed * 10) + lastDigit
+        y = (y / 10) | 0
+    }
+    return x === reversed
+}
+  console.log(isPalindrome());
+  **/
+ </body>
+</html>

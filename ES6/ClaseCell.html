@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clase Cell</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 	//clase celular 
+ 	//propiedades 
+ 	//metodos
+ 	class Celular{
+ 		//determinamos el constructor
+ 		//
+ 		constructor(modelo, precio, datos){
+ 			
+ 			this.modelo=modelo;
+ 			this.precio=precio;
+ 			this.datos=datos;
+ 		}
+ 		//metodo es similar a una propiedad
+ 		ponerNombre(){
+ 			document.write('Poner nombre:'${this.nombre}.'es');
+ 		}
+ 		ponerPrecio(){
+ 			document.write('Poner precio:'${this.precio}.'es');
+ 		   
+ 		}
+
+ 		imprimir(){
+ 			document.write(this.datos+'<br>');
+ 		}
+
+        const celular1 = new Celular('Samsung','230');
+        celular1.ponerNombre();
+        celular1.ponerPrecio();
+
+
+ 	}
+
+
+ </script>
+</body>
+</html>

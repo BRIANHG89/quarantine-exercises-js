@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clase Calculadora</title>
+</head>
+<body>
+   <script type="text/javascript">
+   	 
+     //Una clase es la representación del mundo real que definen propiedades en ES6(javascript mejorado)
+     //podemos hacer uso de su la palabra clave class y el camel case mayusculas.
+   	 class Calculadora{
+     //determinamos las propiedades que vamos a usar
+   	 //metodo encargado de crear nuestro objeto e inicializar sus propiedades
+   	 //el constructor se ejecuta automáticamente
+   	 constructor(x1, x2){
+   	 		this.x1=x1;
+   	 		this.x2=x2;
+   	 		this.resultado=null;
+   	 	}
+   	 //un metodo es muy parecido a las propiedades, solo que estas
+   	 //son funciones lo cual se encarga de modelar el comportamiento
+   	 //que va a tener nuestro objeto.
+   	 sumar(){
+   	 	this.resultado = this.x1 + this.x2;
+   	 	document.write(`La suma de ${this.x1} y ${this.x2} es`);
+   	 	this.imprimir();
+   	 }
+   	 restar(){
+        this.resultado = this.x1 - this.x2;
+        document.write(`La resta de ${this.x1} y ${this.x2} es`);
+        this.imprimir();
+   	 }
+
+   	 imprimir(){
+   	 	document.write(this.resultado+'<br>');
+   	 }
+   	 }
+     //instancia de un objeto es una copia de la clase principal
+
+   	 const calculadora1 = new Calculadora(20, 30);
+   	 //llamada al objeto nuevo precedido del metodo o función
+   	 calculadora1.sumar();
+   	 calculadora1.restar();
+
+   	 //herencia 
+
+
+   </script>
+</body>
+</html>

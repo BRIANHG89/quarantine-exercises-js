@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formas de Arrays</title>
+</head>
+<body>
+	<script type="text/javascript">
+	   //
+	   /**
+        Confeccionar un programa que defina dos array, en uno almacenar los días de la semana y en otro los nombres de los meses. Emplear dos sintaxis diferentes para crear e inicializar sus componentes.
+		**/
+		var meses = new Array('enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre');
+		var dias  = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'];
+		var f;
+		for (f=0; f<meses.length; f++){
+			document.write(meses[f]+'<br>');
+		}
+
+		document.write('<br>');
+		for(f=0;dias.length;f++){
+			document.write(dias[f]+'<br>');
+		}
+
+
+       //distintas formas de crear array
+       //arrays sin elementos
+       // var vector2=[]
+       //crear un array e indicar los componentes iniciales 
+       //var vector3=new Array(5);
+       //creación e inicialización llamando al constructor Array
+       // var vector4=new Array(1,70)
+       // pasar como parámetros los valores a almacenar en //las componentes
+       //var vector4 = new Array(1,70, 'Juan')
+       //
+
+       /**
+        var meses = new Array('enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre');
+
+        var dias = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'];
+        var f;
+        for (f=0; f<meses.length; f++){
+	        document.write(meses[f]+'<br>');
+        }
+        document.write('<br>');
+        for(f=0;dias.length;f++){
+	       document.write(dias[f]+'<br>');
+        }
+
+       **/
+
+	</script>
+
+</body>
+</html>

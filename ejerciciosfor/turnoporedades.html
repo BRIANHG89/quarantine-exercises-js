@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Turno por edades</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+        
+		//ingresar las edades de 5 estudiantes del turno de la mañána. 
+		//Ingresar edades de 6 estudiantes del turno de la tarde. 
+		//Ingresar edades de 11 estudiantes del turno de la noche
+        //a. obtener el promedio de las edades de cada turno tres promedios
+        //b. Imprimir dichos promedios (promedio de cada turno). 
+        //c. Mostrar por pantalla un mensaje que indique cual de los tres turnos tiene promedio de edades mayor. 
+
+        var suma1=0, edad, f, 
+            promedio1, promedio2, promedio3;
+
+        for(f=1; f<5; f++){
+  
+        edad=parseInt(prompt('Ingrese las edades del turno de la mañana'));
+        suma1=suma1+edad;
+        //console.log(suma1);
+        }
+      
+        var suma2=0; edad, f;
+
+        for(f=1; f<6; f++){
+  
+        edad=parseInt(prompt('Ingrese las edades del turno de la tarde'));
+        suma2=suma2+edad;
+        }
+
+        var suma3=0; 
+        for(f=0;f<11;f++) {
+
+        edad=parseInt(prompt('Ingrese las edades del turno de la noche'));
+        suma3=suma3+1;
+
+        }
+        //
+        promedio1=suma1/5;
+        promedio2=suma2/6;
+        promedio3=suma3/11;
+        document.write('Promedio de edades de alumnos del turno mañana:'+promedio1+'<br>');
+        document.write('Promedio de edades de alumnos del turno de la tarde:'+promedio2+'<br>');
+        document.write('Promedio de edades de alumnos del turno de la noche:'+promedio3+'<br>');
+        //aplico la lógica del numero mayor 
+
+        if(promedio1>promedio2 && promedio1>promedio3){
+           document.write('El turno mañana tiene el promedio mayor de edades');
+        }else{
+
+        	if (promedio2>promedio3)
+        	{
+               document.write('El turno tarde tiene el promedio mayor  de edades')
+        	}else{
+               document.write('El turno noche tiene el promedio mayor  de edades')
+
+        	}
+        }
+
+	</script>
+
+</body>
+</html>

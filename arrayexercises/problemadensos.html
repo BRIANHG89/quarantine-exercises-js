@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Problema Densos</title>
+</head>
+<body>
+	<script type="text/javascript">
+		     /****
+         Crear un vector con 10 valores aleatorios comprendidos entre 1 y 500. Luego crear otros dos vectores y copiar los elementos menores a 250 en el segundo vector y los mayores o iguales a 250 en el tercer vector. Imprimir los tamaños del segundo y tercer vector. Imprimir los tres vectores.
+		     ***/
+
+        var vec1=[];
+        var f;
+
+        for(f=0;f<10;f++){
+          //generar valores aleatorios
+         vec1[f]=parseInt(1+(Math.random()*500));
+
+        }
+        var vec2=[];
+        var vec3=[];
+        var indice1=0;//acumulador1
+        var indice2=0;//acumulador2
+        for(f=0;f<vec1.length;f++){
+           
+           	if(vec1[f]<250)
+           	{
+              //copiamos los vectores menores a 250 en el ssegundo vector
+              vec2[indice1]=vec1[f];
+              //incrementamos el acumulador
+              indice1++;
+           	}
+           	else
+           	{
+              //los mayores o iguales en el tercer vector
+           		vec3[indice2]=vec1[f];
+           		indice2++;
+           	}
+        }
+
+  document.write('Tamaño del primer vector'+vec1.length+'<br>');
+  document.write('Tamaño del segundo vector'+vec2.length+'<br>');
+  document.write('Tamaño del tercer vector'+vec3.length+'<br>');
+  document.write('Elementos del primer vector.<br>');
+  for(f=0;f<vec1.length;f++){
+  	document.write(vec1[f]+'-');
+  }
+  document.write('<br>');
+  document.write('Elementos del segundo vector.<br>');
+  for(f=0;f<vec2.length;f++){
+  	document.write(vec2[f]+'-');
+  }
+  document.write('<br>');
+  document.write('Elementos del tercer vector.<br>');
+  for(f=0;f<vec3.length;f++)
+  {
+    document.write(vec3[f]+'-');
+  } 
+
+
+
+
+	</script>
+
+</body>
+</html>

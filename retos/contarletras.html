@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contar Letras</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//contar letras
+
+		function contarCaracteres(cadena) {
+
+		  var cont=[];           //inicializar
+		  var ncad=cadena.split(''); //dividir la cadena
+		  for (var i=0;i<cadena.lenght; i++) { //recorrer 
+		  var letra=ncad[i].charCodeAt();  //pasar cada letra a cada signo ascii
+		    //antes de sumarlo verificar si ya existe en cont, 
+		    //de no ser así inicializar
+		   cont[letra]==undefined ? cont[letra]=1 : cont[letra]++
+
+		     };
+		   total={};
+		   for (var i in cont)
+		   	total[String.fromCharCode(i)=cont[i]];
+
+		   return total;
+
+		}
+
+		  console.log(contarCaracteres('aassjjfIUDDHKSK'));
+	</script>
+
+</body>
+</html>

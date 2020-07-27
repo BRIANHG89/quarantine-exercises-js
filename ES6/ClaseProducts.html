@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product Class</title>
+</head>
+<body>
+	<script type="text/javascript">
+        //clase Producto una clase es un modelo que permite crear otros objetos
+        //propiedades: nombre, modelo o marca, precio
+        //Class Car 
+        //Properties:name, color, price
+        //
+
+        const _private = new WeakMap();
+
+        class Car {
+          //===== Método constructor =======
+
+          constructor(nombre, color, precio){
+          	//properties de mi objeto carro
+          	const properties = {
+          		_nombre: nombre, 
+          		_color: color, 
+          		_precio: precio
+          	}
+          	//Colocar propiedades como privados:
+          	_private.set(this, {properties});
+
+          }
+            //obtiene el nombre del carro 
+            get nombre(){
+            	return _private.get(this).properties['_nombre'];
+            }
+            //Setea/modifica el título de un libro:
+            set nombre(newNombre){
+            	return _private.get(this).properties['_nombre']=newNombre;
+            }
+            get color(){
+            	return _private.get(this).properties['_color'];
+            }
+            //Setea/modifica el título de un libro:
+            set color(setColor){
+            	return _private.get(this).properties['_color']=newColor;
+            }
+            //obtiene el nombre del carro 
+            get precio(){
+            	return _private.get(this).properties['_precio'];
+            }
+            //Setea/modifica el título de un libro:
+            set precio(newPrecio){
+            	return _precio.get(this).properties['_precio']=newPrecio;
+            }
+            //Muestra todos los datos de un carro
+            getAllData(){
+                console.log(`Nombre: ${this.nombre}, Color: ${this.color}, Precio: ${this.precio}`);
+            }
+         }
+         //instancia de car 
+         const car1 = new Car('chevrolet', 'blanco', '24.000');
+         //
+         car1.getAllData();
+	</script>
+
+</body>
+</html>

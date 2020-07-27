@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contador de vocales</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 	//transformar el texto en un array en minúsculas
+ 	//recorra todo el array en búsqueda de cada tipo de vocal a, e, i, o u
+ 	//recorra  todo el array contabilizado 
+ 	//finalmente contar el total de vocales y espacios en blanco
+
+     var a = e = i  = o = u = blancos = 0;
+     vectorLetras = consultarTexto();
+
+     //split()->transforma un string en un array
+     //join()->hace el proceso contrario para volver a unir todas las letras de un vector
+
+     function consultarTexto(){
+     	var texto = window.prompt("Escribe un texto cualquiera");
+     	var textoRoto = texto.toLowerCase().split("");
+     	return textoRoto;
+     }
+
+     for(k=0;k<vectorLetras.length;k++){
+
+     	switch(vectorLetras[k]){
+          		case "a":
+          		case "á":
+          		case "à":
+              		a++;
+              		break;
+            	case "e":
+                case "é":
+                case "è":
+                    e++;
+                    break;
+                case "i":
+                case "í":
+                case "ì":
+                    i++;
+                    break;
+                case "o":
+                case "ó":
+                case "ò":
+                    o++;
+                    break;
+                case "u":
+                case "ú":
+                case "ù":
+                    u++;
+                    break;
+                case " ":
+                    blancos++;   
+     	}
+     }
+
+     totalVocales = a+e+i+o+u;
+     //
+      document.write("Hay " +  a + " vocales 'a'<br>");
+        document.write("Hay " +  e + " vocales 'e'<br>");
+        document.write("Hay " +  i + " vocales 'i'<br>");
+        document.write("Hay " +  o + " vocales 'o'<br>");
+        document.write("Hay " +  u + " vocales 'u'<br>");
+        
+        document.write("<br>");
+        document.write("Total de vocales: " + totalVocales);
+        document.write("<br>");
+        document.write("Total de espacios en blanco: " + blancos);
+        document.write("<br>");
+        document.write("Total de carácteres escritos: " + vectorLetras.length);
+        document.write("<br>");
+        document.write("Texto original: <b>" + vectorLetras.join("") + "</b>");
+
+ </script>
+</body>
+</html>

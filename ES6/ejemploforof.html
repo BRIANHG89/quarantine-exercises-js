@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>For Of</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/****
+          for of: estructura repetitiva para recorrer
+          elementos un array, string, map, set ect.
+		*****/
+
+
+       /**
+        Problema
+        Se tiene el siguiente vector con 3 objetos con los datos.
+        Imprimir el nombre y la edad de las personas mayores
+
+	    **/
+
+		const personas = [
+			                   {
+			                     nombre:'juan',
+			                     edad:45
+			                   },
+			                   {
+			                     nombre:'ana',
+			                     edad:12
+			                   },
+			                   {
+			                     nombre:'luis',
+			                     edad:16
+			                   },
+			                   {
+			                     nombre:'cristina',
+			                     edad:76
+			                   }
+			                 ];
+
+		document.write('<h1>Personas mayores de edad.</h1>');
+			for(let persona of personas)
+				if (persona.edad>=18)
+					document.write(`${persona.nombre} y tiene ${persona.edad} años.<br>`);
+
+
+	</script>
+
+</body>
+</html>

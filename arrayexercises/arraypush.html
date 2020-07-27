@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array Push</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//
+		var sueldos=[];
+		var monto;
+		do{
+			monto=parseInt(prompt('Ingrese el sueldo (0 para finalizar):', ''));
+
+           if (monto!=0)
+           {
+           	sueldos.push(monto);
+           }
+		}while (monto!=0);
+		//sumar arreglos
+
+		var suma=0;
+
+		for(var f=0; f<sueldos.length;f++){
+			suma=suma+sueldos[f];
+		}
+		document.write('El total en sueldos ingresado es:'+suma);
+		
+	</script>
+
+</body>
+</html>
